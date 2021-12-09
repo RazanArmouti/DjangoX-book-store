@@ -1,0 +1,12 @@
+{% extends "_base.html" %}
+
+{% block content%}
+<h2> Books list </h2>
+<p> click on the Book to see it's details.</p>
+<ul>
+{% for Book in object_list%}
+<a href="{{Books.get_absolute_url }}"><li> {{ Books.title }}</li></a>
+
+{% endfor%}
+</ul>
+{% endblock %}
